@@ -34,6 +34,53 @@ body {
   opacity: 1;
 }
 
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+  opacity: 0;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+/* Buttons */
+.buttons button {
+  position: absolute;
+  top: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.buttons button#next {
+  right: 15px;
+}
+
+.buttons button#prev {
+  left: 15px;
+}
+
 /* Background images */
 .slide:first-child {
   background: url("./images/image-1.jpg") no-repeat center top/cover;
