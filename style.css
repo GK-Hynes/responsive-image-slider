@@ -101,3 +101,15 @@ body {
 .slide:nth-child(6) {
   background: url("./images/image-6.jpg") no-repeat center center/cover;
 }
+
+@media (max-width: 576px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
